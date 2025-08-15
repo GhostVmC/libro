@@ -1,0 +1,153 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> USAD</title>
+    <link rel="stylesheet" href="3.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<header class="header">
+    <div class="logo">
+        <img src="logoo.png" alt="logo">
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li class="nav-link menu">
+                <a href="#">Contexto</a>
+                <ul class="drop-down">
+                    <li><a href="2index.html">Historia y evolucion tecnologica</a></li>
+                    <li><a href="3index.html">Cambios en el comportamiento del usuario</a></li>
+                </ul>
+            </li>
+            <li class="nav-link usuario">
+                <a href="#">Usuario</a>
+                <ul class="drop-down">
+                    <li><a href="4index.html">Errores y aprendizajes del usuario</a></li>
+                    <li><a href="5index.html">Retos de diseño centrado en el ser humano</a></li>
+                </ul>
+            </li>
+            <li class="nav-link disciplinas">
+                <a href="#">Disciplinas</a>
+                <ul class="drop-down">
+                    <li><a href="6index.html">Disciplinas que aportan a su rama</a></li>
+                    <li><a href="7index.html">Trabajo multidisciplinario real</a></li>
+                </ul>
+            </li>
+            <li class="nav-link futuro">
+                <a href="#">Futuro</a>
+                <ul class="drop-down">
+                    <li><a href="8index.html">Conexion con el libro de Alan Dix</a></li>
+                    <li><a href="9index.html">Proyeccion futura</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-home">
+                <a href="index.html">
+                    <span class="material-icons">home</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="fondo"></div>
+
+<div class="division1"></div>
+
+<body>
+
+    <section class="cambios">
+        <h2 style="margin-top: 0;">Cambios En El Comportamiento Del Usuario</h2>
+        <p>
+            A medida que la tecnología avanza, también lo hace el comportamiento de los usuarios. La forma en que
+            interactuamos con la tecnología y entre nosotros ha cambiado drásticamente. Algunos de estos cambios
+            incluyen:
+        </p>
+        <ul>
+            <li>Mayor dependencia de dispositivos móviles para la comunicación y el acceso a la información.</li>
+            <li>Preferencia por la comunicación visual (imágenes, videos) sobre el texto.</li>
+            <li>Aumento de la colaboración en línea y el trabajo remoto.</li>
+        </ul>
+    </section>
+
+    <section class="carousel-container">
+        <div class="carousel">
+
+            <img src="Fatiga-visual.jpg" alt=" Usuario" class="active">
+            <img src="teclado.webp" alt="Imagen 2">
+            <img src=" Iux.png" alt="Imagen 3">
+
+        </div>
+        <div class=" carousel-buttons">
+            <button class="carousel-button" onclick="prevImage()"> ⬅</button>
+            <button class="carousel-button" onclick="nextImage()"> ➡</button>
+        </div>
+
+    </section>
+
+    <h2>Factores Humanos y Errores Comunes</h2>
+
+    <details>
+        <summary>1. Errores comunes observados</summary>
+        <ul>
+            <li><strong>Entrada de datos:</strong> Teclas equivocadas, mala ergonomía, desalineación en pantallas
+                táctiles.</li>
+            <li><strong>Percepción visual:</strong> Fatiga ocular, iconos poco legibles, mala elección de colores.</li>
+        </ul>
+        <p><em>Ejemplos:</em> Pulsar el botón equivocado en un cajero; confundir botones en una app móvil.</p>
+    </details>
+
+    <details>
+        <summary>2. Factores humanos que influyen</summary>
+        <ul>
+            <li><strong>Atención:</strong> Distracciones o cansancio provocan omisiones.</li>
+            <li><strong>Memoria:</strong> Sobrecarga de memoria a corto plazo lleva a olvidar pasos.</li>
+            <li><strong>Percepción visual:</strong> Limitaciones en tamaño, color y brillo.</li>
+            <li><strong>Audición:</strong> Alarmas muy similares generan confusión.</li>
+            <li><strong>Tacto:</strong> Falta de retroalimentación en pantallas táctiles.</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>3. Aprendizajes obtenidos</summary>
+        <ul>
+            <li>Preferencia por interfaces consistentes y predecibles.</li>
+            <li>Uso de ayudas multimodales (visuales y sonoras).</li>
+            <li>Adaptación ergonómica: brillo, contraste, posición de dispositivos.</li>
+            <li>Selección de dispositivos adecuados al contexto.</li>
+        </ul>
+    </details>
+
+    <footer>
+        <p>Todos los derechos son reservados a Karol Valeria Diaz Riascos, David Alexander Pupiales Bolaños, Victor
+            Manuel Ortega Chapal y David Nicolas Martines Guanga</p>
+    </footer>
+
+    <script>
+
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+    </script>
+
+</body>
+
+
+
+</html>

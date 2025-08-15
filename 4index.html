@@ -1,0 +1,134 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <TItle>USAD</TItle>
+    <link rel="stylesheet" href="4.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<div class="uno">
+    <header class="header">
+        <div class="logo">
+            <img src="logoo.png" alt="logo">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li class="nav-link menu">
+                    <a href="#">Contexto</a>
+                    <ul class="drop-down">
+                        <li><a href="2index.html">Historia y evolucion tecnologica</a></li>
+                        <li><a href="3index.html">Cambios en el comportamiento del usuario</a></li>
+                    </ul>
+                </li>
+                <li class="nav-link usuario">
+                    <a href="#">Usuario</a>
+                    <ul class="drop-down">
+                        <li><a href="4index.html">Errores y aprendizajes del usuario</a></li>
+                        <li><a href="5index.html">Retos de diseño centrado en el ser humano</a></li>
+                    </ul>
+                </li>
+                <li class="nav-link disciplinas">
+                    <a href="#">Disciplinas</a>
+                    <ul class="drop-down">
+                        <li><a href="6index.html">Disciplinas que aportan a su rama</a></li>
+                        <li><a href="7index.html">Trabajo multidisciplinario real</a></li>
+                    </ul>
+                </li>
+                <li class="nav-link futuro">
+                    <a href="#">Futuro</a>
+                    <ul class="drop-down">
+                        <li><a href="8index.html">Conexion con el libro de Alan Dix</a></li>
+                        <li><a href="9index.html">Proyeccion futura</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-home">
+                    <a href="index.html">
+                        <span class="material-icons">home</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <body>
+
+        <h1 style="margin-top: 40px; margin-bottom: 40px;">Errores y Aprendizajes del Usuario</h1>
+
+        <div class="error">
+            <p>Los humanos interactuan con los ordenadores de muchas maneras; la interfaz entre humanos y
+                ordenadores
+                es crucial para facilitar esta interacción. Usualmente los errores cometidos por los
+                usuarios al interactuar con computadoras son una
+                fuente valiosa de información que puede guiar mejoras en el diseño de interfaces.
+                Cada error, ya sea resultado de la introducción incorrecta de datos o de la selección
+                de opciones equivocadas, revela aspectos sobre las expectativas y limitaciones del usuario.
+                Estos fallos son a menudo el resultado de interfaces que no son intuitivas o de una falta
+                de familiaridad con la tecnología, lo que subraya la necesidad de un diseño más accesible
+                y comprensible. <br>Al analizar estos errores, los diseñadores pueden identificar patrones
+                recurrentes,lo que les permite hacer ajustes que no solo mejoran la experiencia del usuario,
+                sino que también reducen la probabilidad de que se repitan esos errores en el futuro.
+
+                Además, los errores pueden ser utilizados como oportunidades de aprendizaje tanto para
+                los usuarios como para los diseñadores. <br> Los usuarios pueden desarrollar una mayor comprensión
+                de cómo funciona la tecnología mediante la recopilación de patrones anteriormente vistos en otros
+                aparatos tecnologicos y de esta manera poder obtener una forma de interactuar con la tecnologia
+                de manera más efectiva. Por otro lado,
+                los diseñadores pueden aprender sobre las áreas problemáticas en sus interfaces y realizar cambios
+                basados en datos reales de uso. Este ciclo de aprendizaje continuo es esencial para crear sistemas
+                que no solo sean funcionales, sino que también se adapten a las necesidades cambiantes de los
+                usuarios.
+            </p>
+
+
+        </div>
+        <div class="carousel">
+            <img src="https://i.pinimg.com/736x/fb/5c/ec/fb5cec2edd660293c853ba3c04950801.jpg" alt="usuario"
+                class="active">
+            <img src="https://i.pinimg.com/1200x/48/05/ef/4805ef2bdd7c30ff2237db9e652a8546.jpg" alt="imagen 2"
+                style="height: 300px;">
+            <img src="https://i.pinimg.com/1200x/16/7d/af/167daf381ea2cccb28b8c4d3743e249e.jpg" alt="imagen 3"
+                style="height: 300px;">
+
+            <div class="carousel-buttons">
+                <button class="carousel-button" onclick="prevImage()"> ⬅</button>
+                <button class="carousel-button" onclick="nextImage()"> ➡</button>
+            </div>
+        </div>
+
+
+
+
+    </body>
+
+    <footer>
+        <p>Todos los derechos son reservados a Karol Valeria Diaz Riascos, David Alexander Pupiales Bolaños, Victor
+            Manuel Ortega Chapal y Daivd Nicolas Martines Guanga</p>
+    </footer>
+</div>
+
+<script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.carousel img');
+
+    function showImage(index) {
+        images.forEach((img, i) => {
+            img.classList.toggle('active', i === index);
+        });
+    }
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    }
+
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    }
+</script>
+
+</html>
